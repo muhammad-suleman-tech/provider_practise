@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_provider/country_data.dart';
 import 'package:flutter_provider/home_screen2.dart';
 import 'package:flutter_provider/home_screen3.dart';
 import 'package:flutter_provider/list_provider.dart';
@@ -143,6 +144,12 @@ class _HomeScreenState extends State<HomeScreen> {
                       );
                     }, child: const Text("Posts Data"),
                   ),
+                ],
+              ),
+              const SizedBox(height: 10,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
                   ElevatedButton(
                     onPressed: (){
                       Navigator.push(
@@ -150,6 +157,14 @@ class _HomeScreenState extends State<HomeScreen> {
                         MaterialPageRoute(builder: (context) =>  const NewsScreen()),
                       );
                     }, child: const Text("News"),
+                  ),
+                  ElevatedButton(
+                    onPressed: (){
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) =>  const CountryDataScreen()),
+                      );
+                    }, child: const Text("Countries Data"),
                   ),
                 ],
               ),
